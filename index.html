@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dominican Republic Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://flagcdn.com/w80/do.png" alt="DR Flag">
+        Dominican Republic
+    </div>
+
+    <nav>
+        <button class="nav-btn active" onclick="showTab('overview', this)">Overview</button>
+        <button class="nav-btn" onclick="showTab('places', this)">Places</button>
+        <button class="nav-btn" onclick="showTab('food', this)">Food</button>
+        <button class="nav-btn" onclick="showTab('map', this)">Map</button>
+        <button class="nav-btn" onclick="showTab('culture', this)">Culture</button>
+    </nav>
+
+    <a href="https://www.google.com/travel/flights" target="_blank">
+        <button class="cta-btn">🌴 Book The Vibe</button>
+    </a>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Dominican Republic 🇩🇴</h1>
+        <p>Beaches • Music • Island Energy</p>
+    </div>
+</section>
+
+<main>
+
+<!-- OVERVIEW -->
+<section id="overview" class="tab-content active">
+    <h2>Island Energy</h2>
+    <p>
+        The Dominican Republic blends stunning beaches,
+        palm trees, turquoise water, and vibrant nightlife.
+        From Punta Cana resorts to Santo Domingo history,
+        the island delivers pure Caribbean energy.
+    </p>
+</section>
+
+<!-- PLACES -->
+<section id="places" class="tab-content">
+    <h2>Places To Explore</h2>
+
+    <!-- Punta Cana -->
+    <div class="card">
+        <img src="images/punta-cana.jpg" alt="Punta Cana">
+        <div>
+            <h3>Punta Cana</h3>
+            <p>
+                Famous for luxury beachfront resorts,
+                crystal clear water, tropical palm trees,
+                and unforgettable sunsets.
+            </p>
+            <iframe src="https://www.google.com/maps?q=Punta+Cana+Dominican+Republic&output=embed"></iframe>
+        </div>
+    </div>
+
+    <!-- Santo Domingo -->
+    <div class="card">
+        <img src="images/santo-domingo.jpg" alt="Santo Domingo">
+        <div>
+            <h3>Santo Domingo</h3>
+            <p>
+                The capital city filled with colonial history,
+                colorful streets, nightlife, and the famous Zona Colonial.
+            </p>
+            <iframe src="https://www.google.com/maps?q=Santo+Domingo+Dominican+Republic&output=embed"></iframe>
+        </div>
+    </div>
+
+    <!-- Samaná -->
+    <div class="card">
+        <img src="images/samana.jpg" alt="Samana">
+        <div>
+            <h3>Samaná</h3>
+            <p>
+                Known for waterfalls, mountains, and whale watching.
+                A tropical paradise with untouched natural beauty.
+            </p>
+            <iframe src="https://www.google.com/maps?q=Samana+Dominican+Republic&output=embed"></iframe>
+        </div>
+    </div>
+
+</section>
+
+<!-- FOOD -->
+<section id="food" class="tab-content">
+    <h2>Dominican Food 🇩🇴</h2>
+
+    <!-- Mangu -->
+    <div class="card">
+        <img src="images/mangu.jpg" alt="Mangu">
+        <div>
+            <h3>Mangú</h3>
+            <p>
+                Mashed green plantains served with fried cheese,
+                salami, and eggs. A classic Dominican breakfast.
+            </p>
+        </div>
+    </div>
+
+    <!-- Mofongo -->
+    <div class="card">
+        <img src="images/mofongo.jpg" alt="Mofongo">
+        <div>
+            <h3>Mofongo</h3>
+            <p>
+                Fried mashed plantains mixed with garlic and pork,
+                often served with shrimp or chicken.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sancocho -->
+    <div class="card">
+        <img src="images/sancocho.jpg" alt="Sancocho">
+        <div>
+            <h3>Sancocho</h3>
+            <p>
+                A rich Dominican stew made with multiple meats,
+                root vegetables, and bold Caribbean flavor.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- MAP -->
+<section id="map" class="tab-content interactive-map">
+    <h2>Explore The Island</h2>
+    <iframe src="https://www.google.com/maps?q=Dominican+Republic&output=embed"></iframe>
+</section>
+
+<!-- CULTURE -->
+<section id="culture" class="tab-content">
+    <h2>Culture & Music</h2>
+    <p>
+        The Dominican Republic is known for Merengue and Bachata.
+        Music and dancing are a core part of island life.
+    </p>
+</section>
+
+</main>
+
+<script>
+function showTab(tabId, element) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+    element.classList.add('active');
+}
+</script>
+
+</body>
+</html>
